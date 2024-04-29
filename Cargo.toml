@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+atspi = { git = "https://github.com/odilia-app/atspi.git", branch = "objectref2accessibleproxy", features = ["proxies-tokio"] }
 tokio = { version = "1", features = ["full"] }
 tokio-stream = { version = "0.1", features = ["full"] }
 zbus = "4"
