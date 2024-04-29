@@ -178,60 +178,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1505bd5d3d116872e7271a6d4e16d81d0c8570876c8de68093a09ac269d8aac0"
 
 [[package]]
-name = "atspi"
-version = "0.21.0"
-source = "git+https://github.com/odilia-app/atspi.git?branch=objectref2accessibleproxy#85d7518c8a2c54f5208e642b45d8334c6fb481ae"
-dependencies = [
- "atspi-common",
- "atspi-connection",
- "atspi-proxies",
-]
-
-[[package]]
-name = "atspi-common"
-version = "0.5.0"
-source = "git+https://github.com/odilia-app/atspi.git?branch=objectref2accessibleproxy#85d7518c8a2c54f5208e642b45d8334c6fb481ae"
-dependencies = [
- "enumflags2",
- "serde",
- "static_assertions",
- "zbus",
- "zbus-lockstep",
- "zbus-lockstep-macros",
- "zbus_names",
- "zvariant",
-]
-
-[[package]]
-name = "atspi-connection"
-version = "0.5.0"
-source = "git+https://github.com/odilia-app/atspi.git?branch=objectref2accessibleproxy#85d7518c8a2c54f5208e642b45d8334c6fb481ae"
-dependencies = [
- "atspi-common",
- "atspi-proxies",
- "futures-lite",
- "zbus",
-]
-
-[[package]]
-name = "atspi-offspring"
+name = "atspi-changed-offspring"
 version = "0.1.0"
 dependencies = [
- "atspi",
  "tokio",
  "tokio-stream",
  "zbus",
-]
-
-[[package]]
-name = "atspi-proxies"
-version = "0.5.0"
-source = "git+https://github.com/odilia-app/atspi.git?branch=objectref2accessibleproxy#85d7518c8a2c54f5208e642b45d8334c6fb481ae"
-dependencies = [
- "atspi-common",
- "serde",
- "zbus",
- "zvariant",
 ]
 
 [[package]]
@@ -759,16 +711,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "quick-xml"
-version = "0.30.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eff6510e86862b57b210fd8cbe8ed3f0d7d600b9c2863cd4549a2e033c66e956"
-dependencies = [
- "memchr",
- "serde",
-]
-
-[[package]]
 name = "quote"
 version = "1.0.36"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1002,7 +944,6 @@ dependencies = [
  "signal-hook-registry",
  "socket2",
  "tokio-macros",
- "tracing",
  "windows-sys 0.48.0",
 ]
 
@@ -1335,37 +1276,12 @@ dependencies = [
  "serde_repr",
  "sha1",
  "static_assertions",
- "tokio",
  "tracing",
  "uds_windows",
  "windows-sys 0.52.0",
  "xdg-home",
  "zbus_macros",
  "zbus_names",
- "zvariant",
-]
-
-[[package]]
-name = "zbus-lockstep"
-version = "0.4.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ca2c5dceb099bddaade154055c926bb8ae507a18756ba1d8963fd7b51d8ed1d"
-dependencies = [
- "zbus_xml",
- "zvariant",
-]
-
-[[package]]
-name = "zbus-lockstep-macros"
-version = "0.4.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "709ab20fc57cb22af85be7b360239563209258430bccf38d8b979c5a2ae3ecce"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.60",
- "zbus-lockstep",
- "zbus_xml",
  "zvariant",
 ]
 
@@ -1391,19 +1307,6 @@ checksum = "4b9b1fef7d021261cc16cba64c351d291b715febe0fa10dc3a443ac5a5022e6c"
 dependencies = [
  "serde",
  "static_assertions",
- "zvariant",
-]
-
-[[package]]
-name = "zbus_xml"
-version = "4.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab3f374552b954f6abb4bd6ce979e6c9b38fb9d0cd7cc68a7d796e70c9f3a233"
-dependencies = [
- "quick-xml",
- "serde",
- "static_assertions",
- "zbus_names",
  "zvariant",
 ]
 
